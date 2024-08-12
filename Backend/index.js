@@ -50,6 +50,19 @@ app.post("/api/campusLead",(req,res)=>{
 
     
 })
+app.post("/CLMessage",(req,res)=>{
+    const name= req.body.name;
+    const email= req.body.email;
+    const message = req.body.message;
+    console.log([name,email,message]);
+    return res.status(200).send({ status: 200});
+})
+
+app.get("/CLMessage",(req,res)=>{
+
+})
+
+
 app.listen(8000,()=>{
     console.log("backend connected");
 });
