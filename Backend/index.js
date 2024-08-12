@@ -23,7 +23,7 @@ app.get("/api/campusLead",(req,res)=>{
     
 });
 
-app.get("/user",(req,res)=>{
+app.get("/api/user",(req,res)=>{
     const sql="SELECT * FROM user;";
     conn.query(sql, (err,data)=>{
         if(err) console.log(err);
@@ -32,7 +32,7 @@ app.get("/user",(req,res)=>{
 
 
 });
-app.post("/api/campusLead",(req,res)=>{
+app.post("/api/user",(req,res)=>{
     const name = req.body.name;
     const email = req.body.email;
     const college = req.body.college;
